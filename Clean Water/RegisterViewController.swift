@@ -94,6 +94,8 @@ class RegisterViewController: UIViewController {
         ] as [String : Any]
         
         root.child(self.username.text!).setValue(data)
+        
+        root.childByAutoId().setValue(data)
     }
     
     func alert(title: String, body: String) {

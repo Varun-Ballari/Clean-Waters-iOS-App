@@ -15,6 +15,8 @@ class IndexViewController: UIViewController {
     let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var currentUser: String!
     
+    @IBOutlet var animationView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let imageView = GIFImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.width / 1.3))
