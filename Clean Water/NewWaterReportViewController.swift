@@ -7,103 +7,60 @@
 //
 
 import UIKit
-import CoreLocation
-import Firebase
-import FirebaseDatabase
+import CoreData
 
-class NewWaterReportViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-    var text = ""
-    @IBOutlet var addressTextField: UITextField!
-
-    @IBOutlet var waterConditionPicker: UIPickerView!
-    @IBOutlet var waterTypePicker: UIPickerView!
+class NewWaterReportViewController: UIViewController {
     
-    
-    var waterTypeArray = ["Bottled", "Well", "Stream", "Lake", "Spring", "Other"]
-    var waterConditionArray = ["Waste", "Treatable-Clear", "Treatable-Muddy", "Potable"]
+    @IBOutlet var availabilityCV: UIView!
+    @IBOutlet var purityCV: UIView!
+    var accountType: String!
 
-    var waterTypeValue: String!
-    var waterConditionValue: String!
+    let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    @IBOutlet var segmentedControl: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.barTintColor = UIColor.init(rgb: 0xE1E8ED, alpha: 1)
         
-        waterTypeValue = waterTypeArray[0]
-        waterConditionValue = waterConditionArray[0]
-
-        addressTextField.text = text
+        availabilityCV.alpha = 1
+        purityCV.alpha = 0
         
-        waterTypePicker.dataSource = self
-        waterTypePicker.delegate = self
-        waterConditionPicker.dataSource = self
-        waterConditionPicker.delegate = self
-
+        let fetchRequest:  NSFetchRequest<CurrentUser> = CurrentUser.fetchRequest()
+        do {
+            let cur = try managedContext.fetch(fetchRequest)
+            accountType = cur[0].accountType!
+            
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+        
+        if (accountType == "User") {
+            segmentedControl.setEnabled(false, forSegmentAt: 1)
+        }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if (accountType == "User") {
+            segmentedControl.removeSegment(at: 1, animated: true)
+        }
+    }
+    
+    @IBAction func changeView(_ sender: UISegmentedControl) {
 
+        if (sender.selectedSegmentIndex == 0) {
+            availabilityCV.alpha = 1
+            purityCV.alpha = 0
+        } else {
+            availabilityCV.alpha = 0
+            purityCV.alpha = 1
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if pickerView.tag == 1 {
-            return self.waterTypeArray.count
-        } else {
-            return self.waterConditionArray.count
-        }
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if pickerView.tag == 1 {
-            return waterTypeArray[row]
-        } else {
-            return waterConditionArray[row]
-        }
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if pickerView.tag == 1 {
-            waterTypeValue = waterTypeArray[row]
-        } else {
-            waterConditionValue = waterConditionArray[row]
-        }
-    }
-    
-    
     @IBAction func cancel(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-
-    @IBAction func saveToFirebase(_ sender: Any) {
-        
-        let geocoder = CLGeocoder()
-        
-        geocoder.geocodeAddressString(addressTextField.text!) { placemarks, error in
-            
-            if error == nil {
-                print(placemarks)
-                print(placemarks?[0].addressDictionary?[5])
-                print(placemarks?[0].location?.coordinate.latitude)
-                print(placemarks?[0].location?.coordinate.longitude)
-
-                print(placemarks?[0].name)
-
-
-
-            } else {
-                let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
-            }
-        }
-        
-
-    }
-
 }

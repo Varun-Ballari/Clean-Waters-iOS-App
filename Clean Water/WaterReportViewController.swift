@@ -71,6 +71,7 @@ class WaterReportViewController: UIViewController {
         tableView.contentInset = UIEdgeInsets(top: tableHeaderHeight, left: 0, bottom: 0, right: 0)
         tableView.contentOffset = CGPoint(x: 0, y: -tableHeaderHeight)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(self.sent), name: NSNotification.Name(rawValue: "Succesful Completion"), object: nil)
     }
     
     func updateHeaderView() {
@@ -235,6 +236,11 @@ extension WaterReportViewController: UITableViewDelegate, UITableViewDataSource 
         alert.addAction(CancelAction)
         
         self.present(alert, animated: true, completion: nil)
+    }
+    
+
+    func sent() {
+        SweetAlert().showAlert("Successful Entry", subTitle: "Data entered into system.", style: AlertStyle.success)
     }
 
 }

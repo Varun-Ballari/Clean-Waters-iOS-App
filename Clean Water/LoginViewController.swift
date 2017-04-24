@@ -49,7 +49,12 @@ class LoginViewController: UIViewController {
     
 
     @IBAction func login(_ sender: Any) {
-
+        
+        if (self.emailTextField.text == "" || self.passwordTextField.text == "") {
+            self.alert(title: "Wrong Credentials", body: "Username or Password field is empty. Please fill in all fields and try again.")
+            return
+        }
+        
         let messagesRef = root.child("users").child(emailTextField.text!)
         
         root.child("users").child(emailTextField.text!).observeSingleEvent(of: .value, with: { snapshot in

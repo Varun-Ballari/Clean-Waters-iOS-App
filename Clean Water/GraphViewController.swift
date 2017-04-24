@@ -24,6 +24,7 @@ class GraphViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(self.sent), name: NSNotification.Name(rawValue: "Succesful Completion"), object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -93,5 +94,9 @@ class GraphViewController: UIViewController {
     }
     @IBAction func cancel(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func sent() {
+        SweetAlert().showAlert("Successful Entry", subTitle: "Data entered into system.", style: AlertStyle.success)
     }
 }

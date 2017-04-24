@@ -153,6 +153,11 @@ class GoogleMapsViewController: UIViewController, GMSMapViewDelegate {
         performSegue(withIdentifier: "gShowGraph", sender: self)
     }
     
+    @IBAction func addReport(_ sender: Any) {
+        performSegue(withIdentifier: "gAddReport", sender: self)
+    }
+    
+    
 }
 
 struct WaterReport {

@@ -17,7 +17,6 @@ target 'Clean Water' do
   pod 'Gifu'
   pod 'ScrollableGraphView'
 
-
   target 'Clean WaterTests' do
     inherit! :search_paths
     # Pods for testing
