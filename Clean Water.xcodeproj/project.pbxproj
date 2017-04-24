@@ -31,6 +31,7 @@
 		9AC6316E1EADC80900AD057D /* SubmitAvailabilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC6316D1EADC80900AD057D /* SubmitAvailabilityViewController.swift */; };
 		9AC631701EADC9F600AD057D /* SubmitPurityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC6316F1EADC9F600AD057D /* SubmitPurityViewController.swift */; };
 		9AC631721EADD45E00AD057D /* SweetAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC631711EADD45E00AD057D /* SweetAlert.swift */; };
+		9AC631741EADDCF300AD057D /* SecurityLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC631731EADDCF300AD057D /* SecurityLogViewController.swift */; };
 		9AE67A751E675C4E0004DA53 /* GoogleMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE67A741E675C4E0004DA53 /* GoogleMapsViewController.swift */; };
 		9AECB5701E84C4670084A9D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9AECB56F1E84C4670084A9D1 /* GoogleService-Info.plist */; };
 		AB8694DE8ADED5B5EDDF8D0A /* Pods_Clean_WaterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31D39B64A294237D1F3598 /* Pods_Clean_WaterTests.framework */; };
@@ -89,6 +90,7 @@
 		9AC6316D1EADC80900AD057D /* SubmitAvailabilityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitAvailabilityViewController.swift; sourceTree = "<group>"; };
 		9AC6316F1EADC9F600AD057D /* SubmitPurityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitPurityViewController.swift; sourceTree = "<group>"; };
 		9AC631711EADD45E00AD057D /* SweetAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetAlert.swift; sourceTree = "<group>"; };
+		9AC631731EADDCF300AD057D /* SecurityLogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityLogViewController.swift; sourceTree = "<group>"; };
 		9AE67A741E675C4E0004DA53 /* GoogleMapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleMapsViewController.swift; sourceTree = "<group>"; };
 		9AECB56F1E84C4670084A9D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A4343F62FA6EE788B2E362AC /* Pods-Clean Water.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clean Water.release.xcconfig"; path = "Pods/Target Support Files/Pods-Clean Water/Pods-Clean Water.release.xcconfig"; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				9A4DABAE1E5E82DA00AB9DB4 /* RegisterViewController.swift */,
 				9AC631711EADD45E00AD057D /* SweetAlert.swift */,
 				9A2668211E5E780C00D1F592 /* Main.storyboard */,
+				9AC631731EADDCF300AD057D /* SecurityLogViewController.swift */,
 				9A2A95591E8628FF0098EE2E /* TabBarController.swift */,
 				9A3D04051E84D63F00097C7A /* WaterReportViewController.swift */,
 				9AABAE7C1EAD3EF300D4CBC9 /* ReportViewController.swift */,
@@ -519,6 +522,7 @@
 				9AC631721EADD45E00AD057D /* SweetAlert.swift in Sources */,
 				9A3D04061E84D63F00097C7A /* WaterReportViewController.swift in Sources */,
 				9A3D04081E84E17000097C7A /* NewWaterReportViewController.swift in Sources */,
+				9AC631741EADDCF300AD057D /* SecurityLogViewController.swift in Sources */,
 				9AC631701EADC9F600AD057D /* SubmitPurityViewController.swift in Sources */,
 				9A4DABAD1E5E82A000AB9DB4 /* LoginViewController.swift in Sources */,
 				9AC6316E1EADC80900AD057D /* SubmitAvailabilityViewController.swift in Sources */,
