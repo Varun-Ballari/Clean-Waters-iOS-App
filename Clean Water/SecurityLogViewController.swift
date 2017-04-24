@@ -61,5 +61,4 @@ struct LoginReport {
     var time : String
     var success : String
     var user : String
-    
 }

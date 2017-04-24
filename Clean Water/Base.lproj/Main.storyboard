@@ -723,7 +723,7 @@
             </objects>
             <point key="canvasLocation" x="5762" y="-1095"/>
         </scene>
-        <!--Security Log View Controller-->
+        <!--Security Log-->
         <scene sceneID="cyV-9e-aPL">
             <objects>
                 <viewController id="eFz-4e-po2" customClass="SecurityLogViewController" customModule="Clean_Water" customModuleProvider="target" sceneMemberID="viewController">
@@ -784,7 +784,7 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="qem-Ik-Pxo"/>
+                    <navigationItem key="navigationItem" title="Security Log" id="qem-Ik-Pxo"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="p5F-f8-2n8" id="3yk-G7-b4H"/>
@@ -792,12 +792,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LCF-Yc-rtj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5715" y="1723.943661971831"/>
+            <point key="canvasLocation" x="4723" y="1724"/>
         </scene>
-        <!--View Controller-->
+        <!--Users-->
         <scene sceneID="8j4-NQ-6r9">
             <objects>
-                <viewController id="IyJ-iV-RKm" sceneMemberID="viewController">
+                <viewController id="IyJ-iV-RKm" customClass="AdminUsersViewController" customModule="Clean_Water" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qwv-IG-cwR"/>
                         <viewControllerLayoutGuide type="bottom" id="6Zf-Ck-wwz"/>
@@ -807,10 +807,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="a2X-6Q-W5y">
-                                <rect key="frame" x="0.0" y="-44" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <color key="backgroundColor" red="0.39369308949999998" green="0.46577262879999998" blue="0.52831715349999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="BZG-a0-ogU" detailTextLabel="Cbz-6Z-J4d" style="IBUITableViewCellStyleValue1" id="1ba-je-2g8">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserDataCell" textLabel="BZG-a0-ogU" detailTextLabel="Cbz-6Z-J4d" style="IBUITableViewCellStyleValue1" id="1ba-je-2g8">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1ba-je-2g8" id="xc9-1M-DwP">
@@ -855,12 +855,15 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="jMI-bc-UpC"/>
+                    <navigationItem key="navigationItem" title="Users" id="jMI-bc-UpC"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="a2X-6Q-W5y" id="HHJ-D3-VGL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pQO-15-xLd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2826" y="2074"/>
+            <point key="canvasLocation" x="4718" y="2434"/>
         </scene>
         <!--New Water Report View Controller-->
         <scene sceneID="ehq-bQ-f5h">
@@ -1049,6 +1052,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <segue destination="Lqq-Ka-VFj" kind="relationship" relationship="viewControllers" id="4eB-9p-gEg"/>
                         <segue destination="Pc7-ZU-eUf" kind="relationship" relationship="viewControllers" id="Ab4-Qp-iLr"/>
                         <segue destination="euU-Ra-hvF" kind="relationship" relationship="viewControllers" id="Xxh-WZ-UYo"/>
                     </connections>
@@ -1877,7 +1881,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tnb-T8-M0G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4781.25" y="1723.943661971831"/>
+            <point key="canvasLocation" x="3784" y="1724"/>
+        </scene>
+        <!--Users-->
+        <scene sceneID="5xL-01-llw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lqq-Ka-VFj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Users" image="users" id="O9N-Si-tZH"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pup-Vd-2Tj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IyJ-iV-RKm" kind="relationship" relationship="rootViewController" id="H0S-no-IJg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1vg-OJ-NNt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3783.75" y="2433.8028169014083"/>
         </scene>
     </scenes>
     <resources>
@@ -1891,6 +1914,7 @@
         <image name="newspaper" width="16" height="16"/>
         <image name="settings" width="16" height="16"/>
         <image name="starry" width="800" height="600"/>
+        <image name="users" width="16" height="16"/>
         <image name="water" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
