@@ -41,6 +41,7 @@ PODS:
   - FirebaseStorage (1.0.5):
     - FirebaseAnalytics (~> 3.5)
     - GTMSessionFetcher/Core (~> 1.1)
+  - Gifu (2.0.0)
   - GoogleInterchangeUtilities (1.2.2):
     - GoogleSymbolUtilities (~> 1.1)
   - GoogleMaps (2.2.0):
@@ -62,6 +63,7 @@ PODS:
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.0)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.0)
   - GTMSessionFetcher/Core (1.1.7)
+  - ScrollableGraphView (3.1.0)
 
 DEPENDENCIES:
   - Firebase/Analytics
@@ -70,8 +72,10 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/RemoteConfig
   - Firebase/Storage
+  - Gifu
   - GoogleMaps
   - GooglePlaces
+  - ScrollableGraphView
 
 SPEC CHECKSUMS:
   Firebase: 387f37c7dca894a02708da9ff35ba147040eae9e
@@ -82,13 +86,15 @@ SPEC CHECKSUMS:
   FirebaseInstanceID: ba1e640935235e5fac39dfa816fe7660e72e1a8a
   FirebaseRemoteConfig: 383a9afe0a9291ada949e3f615257928a823b594
   FirebaseStorage: 5738284835edb57f0e81d4ae5832bb17c1e4b5fa
+  Gifu: 56a4d8f1092399159fa32662aa2232158b48d8ac
   GoogleInterchangeUtilities: d5bc4d88d5b661ab72f9d70c58d02ca8c27ad1f7
   GoogleMaps: 104c418d61ab8a05dff06ed0784c25ea9d37da45
   GooglePlaces: bca867d5e9da15384c794b945e4226848bc6e9d9
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
   GTMSessionFetcher: a1f8ed39e4fe21c68957daed472c7afbcdf29166
+  ScrollableGraphView: e2c8bedc7bbb643e8ac57b9456070d68355c4e4c
 
-PODFILE CHECKSUM: 5fdaeb2e9543b81bd5211d485a8685af61da970b
+PODFILE CHECKSUM: 3c4cb670d9e6857db4f93e5789a34cb8d7ad7370
 
 COCOAPODS: 1.1.1

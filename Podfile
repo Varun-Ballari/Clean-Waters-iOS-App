@@ -14,7 +14,8 @@ target 'Clean Water' do
   pod 'Firebase/RemoteConfig'
   pod 'GoogleMaps'
   pod 'GooglePlaces'
-
+  pod 'Gifu'
+  pod 'ScrollableGraphView'
 
 
   target 'Clean WaterTests' do

@@ -131,7 +131,24 @@ class SettingsTableViewController: UITableViewController {
     }
 
     @IBAction func logout(_ sender: Any) {
+        clearData()
         self.dismiss(animated: true, completion: nil)
     }
-
+    
+    func clearData() {
+            
+        let fetchRequest:  NSFetchRequest<CurrentUser> = CurrentUser.fetchRequest()
+        do {
+            let cur = try managedContext.fetch(fetchRequest)
+            
+            for item in cur {
+                managedContext.delete(item)
+            }
+            
+            try managedContext.save()
+            
+        } catch let error as NSError {
+            print("ERROR DELETING : \(error)")
+        }
+    }
 }

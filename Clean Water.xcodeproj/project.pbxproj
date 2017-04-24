@@ -24,6 +24,10 @@
 		9A9F33D51E85CF1600D18E27 /* UserModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9A9F33D31E85CF1600D18E27 /* UserModel.xcdatamodeld */; };
 		9A9F33D91E85E65F00D18E27 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9F33D81E85E65F00D18E27 /* SettingsTableViewController.swift */; };
 		9A9F33DB1E85E8B900D18E27 /* EditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9F33DA1E85E8B900D18E27 /* EditTableViewController.swift */; };
+		9AABAE791EACF10500D4CBC9 /* animation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9AABAE781EACF10500D4CBC9 /* animation.gif */; };
+		9AABAE7D1EAD3EF300D4CBC9 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AABAE7C1EAD3EF300D4CBC9 /* ReportViewController.swift */; };
+		9AABAE7F1EAD55C600D4CBC9 /* animation_blue.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9AABAE7E1EAD55C600D4CBC9 /* animation_blue.gif */; };
+		9AABAE811EAD5E4400D4CBC9 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AABAE801EAD5E4400D4CBC9 /* GraphViewController.swift */; };
 		9AE67A751E675C4E0004DA53 /* GoogleMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE67A741E675C4E0004DA53 /* GoogleMapsViewController.swift */; };
 		9AECB5701E84C4670084A9D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9AECB56F1E84C4670084A9D1 /* GoogleService-Info.plist */; };
 		AB8694DE8ADED5B5EDDF8D0A /* Pods_Clean_WaterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31D39B64A294237D1F3598 /* Pods_Clean_WaterTests.framework */; };
@@ -75,6 +79,10 @@
 		9A9F33D41E85CF1600D18E27 /* UserModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserModel.xcdatamodel; sourceTree = "<group>"; };
 		9A9F33D81E85E65F00D18E27 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		9A9F33DA1E85E8B900D18E27 /* EditTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTableViewController.swift; sourceTree = "<group>"; };
+		9AABAE781EACF10500D4CBC9 /* animation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = animation.gif; sourceTree = "<group>"; };
+		9AABAE7C1EAD3EF300D4CBC9 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		9AABAE7E1EAD55C600D4CBC9 /* animation_blue.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = animation_blue.gif; sourceTree = "<group>"; };
+		9AABAE801EAD5E4400D4CBC9 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		9AE67A741E675C4E0004DA53 /* GoogleMapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleMapsViewController.swift; sourceTree = "<group>"; };
 		9AECB56F1E84C4670084A9D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A4343F62FA6EE788B2E362AC /* Pods-Clean Water.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clean Water.release.xcconfig"; path = "Pods/Target Support Files/Pods-Clean Water/Pods-Clean Water.release.xcconfig"; sourceTree = "<group>"; };
@@ -162,17 +170,21 @@
 				9A910F271E68C1A8006EB57B /* Models */,
 				9A26681D1E5E780C00D1F592 /* AppDelegate.swift */,
 				9A26681F1E5E780C00D1F592 /* IndexViewController.swift */,
-				9A3D04051E84D63F00097C7A /* WaterReportViewController.swift */,
+				9AABAE781EACF10500D4CBC9 /* animation.gif */,
+				9AABAE7E1EAD55C600D4CBC9 /* animation_blue.gif */,
 				9A4DABAC1E5E82A000AB9DB4 /* LoginViewController.swift */,
 				9A4DABAE1E5E82DA00AB9DB4 /* RegisterViewController.swift */,
 				9A2668211E5E780C00D1F592 /* Main.storyboard */,
 				9A2A95591E8628FF0098EE2E /* TabBarController.swift */,
+				9A3D04051E84D63F00097C7A /* WaterReportViewController.swift */,
+				9AABAE7C1EAD3EF300D4CBC9 /* ReportViewController.swift */,
 				9A3D04071E84E17000097C7A /* NewWaterReportViewController.swift */,
-				9A2A95571E8620510098EE2E /* ColorExtension.swift */,
-				9A9F33D31E85CF1600D18E27 /* UserModel.xcdatamodeld */,
+				9AABAE801EAD5E4400D4CBC9 /* GraphViewController.swift */,
 				9AE67A741E675C4E0004DA53 /* GoogleMapsViewController.swift */,
 				9A9F33D81E85E65F00D18E27 /* SettingsTableViewController.swift */,
 				9A9F33DA1E85E8B900D18E27 /* EditTableViewController.swift */,
+				9A9F33D31E85CF1600D18E27 /* UserModel.xcdatamodeld */,
+				9A2A95571E8620510098EE2E /* ColorExtension.swift */,
 				9A2668241E5E780C00D1F592 /* Assets.xcassets */,
 				9A2668261E5E780C00D1F592 /* LaunchScreen.storyboard */,
 				9AECB56F1E84C4670084A9D1 /* GoogleService-Info.plist */,
@@ -325,8 +337,10 @@
 			files = (
 				9A2668281E5E780C00D1F592 /* LaunchScreen.storyboard in Resources */,
 				9AECB5701E84C4670084A9D1 /* GoogleService-Info.plist in Resources */,
+				9AABAE791EACF10500D4CBC9 /* animation.gif in Resources */,
 				9A2668251E5E780C00D1F592 /* Assets.xcassets in Resources */,
 				9A2668231E5E780C00D1F592 /* Main.storyboard in Resources */,
+				9AABAE7F1EAD55C600D4CBC9 /* animation_blue.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +504,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A9F33D91E85E65F00D18E27 /* SettingsTableViewController.swift in Sources */,
+				9AABAE7D1EAD3EF300D4CBC9 /* ReportViewController.swift in Sources */,
 				9A2A955A1E8628FF0098EE2E /* TabBarController.swift in Sources */,
 				9A9F33DB1E85E8B900D18E27 /* EditTableViewController.swift in Sources */,
 				9A3D04061E84D63F00097C7A /* WaterReportViewController.swift in Sources */,
@@ -497,6 +512,7 @@
 				9A4DABAD1E5E82A000AB9DB4 /* LoginViewController.swift in Sources */,
 				9AE67A751E675C4E0004DA53 /* GoogleMapsViewController.swift in Sources */,
 				9A2668201E5E780C00D1F592 /* IndexViewController.swift in Sources */,
+				9AABAE811EAD5E4400D4CBC9 /* GraphViewController.swift in Sources */,
 				9A9F33D51E85CF1600D18E27 /* UserModel.xcdatamodeld in Sources */,
 				9A26681E1E5E780C00D1F592 /* AppDelegate.swift in Sources */,
 				9A4DABAF1E5E82DA00AB9DB4 /* RegisterViewController.swift in Sources */,
@@ -659,6 +675,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "FourAndAHalfMen.Clean-Water";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -673,6 +690,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "FourAndAHalfMen.Clean-Water";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

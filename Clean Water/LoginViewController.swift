@@ -81,6 +81,8 @@ class LoginViewController: UIViewController {
         
         let userName = CurrentUser(context: self.managedObjectContext)
         userName.username = self.emailTextField.text
+        userName.accountType = self.userType
+        
         
         if self.userType != "Admin" {
     
